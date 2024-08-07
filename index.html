@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="./Estilos/style.css">
+</head>
+<body class="body">
+    <header class="header">
+        <img class="headerImagen" src="recursos/Logo.png" alt="Logo de Alura">
+    </header>
+    <main class="main">
+        <section>
+            <form class="cajaTexto">
+                <textarea id="texto" name="texto" placeholder="Ingrese el texto aquí" class="textoIngresado"></textarea>
+            </form>
+            <div class="Aviso">
+                <p class="avisoParrafo"> <img src="recursos/exclamacionIcono.svg">Solo letras minúsculas y sin acentos</p>
+            </div>
+            <section class="seccionBotones">
+                <button onclick="encriptarTexto()" class="botonEncriptar">Encriptar</button>
+                <button onclick="desencriptarTexto()" class="botonDesencriptar">Desencriptar</button>
+            </section>
+        </section>
+
+        <section class="rectangulo">
+            <div id="REC">
+                 <div class="imgRec">
+                    <img src="recursos/Muñeco.svg">
+                 </div> 
+                 <h2>Ningun mensaje fue encontrado</h2> 
+            </div>
+            <textarea class="parrafoRec">Ingresa el texto que desees encriptar o desencriptar</textarea> 
+            <div class="seccionCopiar">
+                <button onclick="copiarTexo()" class="botonCopiar">Copiar</button>
+            </div>
+        </section>
+    </main>
+   
+    <footer class="footer">
+        Challenge de Alura, desarrollado por Jose Rodrigo (Agosto, 2024)
+        <div class="imagenesFooter">
+            <a class="link" href="https://github.com/Rodrigo-IS">
+                <img src="recursos/github.png" alt="Logo Github">
+            </a>
+            <a href="https://www.linkedin.com/in/ibarra-santill%C3%A1n-jos%C3%A9-rodrigo-b429a0267/">
+                <img src="recursos/linkedin.png" alt="Logo Linkedin">
+            </a>
+        </div>
+    </footer>
+    <script src="encriptador.js" defer></script>
+</body>
+</html>

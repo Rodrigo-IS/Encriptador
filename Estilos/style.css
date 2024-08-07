@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --colorPrimario: #F3F5FC;
+    --colorSecundario: #000000;
+    --colorTerciario:#0A3871;
+    --colorHover: #c1c0c7;
+
+    --fuenteInter: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--colorPrimario);
+    height: 100vh;
+    font-family: var(--fuenteInter);
+}
+
+.header {
+    padding: 40px 0 0 40px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+}
+.cajaTexto {
+    padding: 90px 0 0 240px;
+}
+
+.textoIngresado{
+    border: none;
+    background-color: var(--colorPrimario);
+    font-family: var(--fuenteInter);
+    font-size: 32px;
+    color: var(--colorSecundario);
+    width: 50%;
+    height: 400px;
+    resize: none; 
+    overflow-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-all;
+    white-space: pre-wrap;
+
+}
+.textoIngresado::placeholder{
+    color:var(--colorTerciario );
+}
+
+.Aviso{
+    padding: 0px 0px 0px 240px;
+}
+.avisoParrafo{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0px 0px 1% 0px;
+}
+.seccionBotones{
+    padding: 0px 0px 72px 240px;
+    gap:24px;
+}
+
+.botonEncriptar{
+    border-radius: 24px;
+    width: 26%;
+    padding: 24px 0px;
+    font-family: var(--fuenteInter);
+    font-size: 16px;
+    background-color: var(--colorTerciario);
+    color: white;
+    border: 1px solid var(--colorTerciario);
+}
+.botonDesencriptar{
+    border-radius: 24px;
+    width: 26%;
+    padding: 24px 0px;
+    font-family: var(--fuenteInter);
+    font-size: 16px;
+    background-color: #D8DFE8;
+    color: var(--colorTerciario);
+    border: 1px solid var(--colorTerciario);
+}
+.rectangulo{
+    box-sizing: border-box;
+    object-fit: contain;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: 700px;
+    background-color: white;
+    border-radius:32px;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    box-shadow: 5px 5px 32px -8px rgba(0, 0, 0, 0.08), -5px 5px 32px -8px rgba(0, 0, 0, 0.08), 0px 10px 32px -8px rgba(0, 0, 0, 0.08);
+    gap: 10px;
+    
+}
+#REC{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.parrafoRec{
+    word-wrap: break-word; 
+    word-break: break-all; 
+    overflow-wrap: break-word; 
+    white-space: pre-wrap;
+    font-family: var(--fuenteInter);
+    font-size: 16;
+    width: 80%;
+    resize: none;
+    text-align: center;
+    padding: 16px 0px 50px 0px;
+    border:none;
+}
+.imgRec{
+    padding: 100px 32px 32px;
+}
+h2{
+    font-size: 24px;
+    font-family: var(--fuenteInter);
+    font-weight: bold;
+    text-align: center;
+    width: 336px;
+    height: 58px;
+}
+.botonDesencriptar:hover{
+    background-color: var(--colorHover);
+}
+.botonEncriptar:hover{
+    background-color: var(--colorHover);
+}
+.botonCopiar:hover{
+    background-color: var(--colorHover);
+}
+.botonCopiar{
+    border-radius: 24px;
+    width: 100px;
+    padding: 24px 0px;
+    font-family: var(--fuenteInter);
+    font-size: 16px;
+    background-color: #f9f9f9;
+    color: var(--colorTerciario);
+    border: 1px solid var(--colorTerciario);
+}
+.footer{
+    background-color: #0A3871;
+    padding: 24px;
+    text-align: center;
+    color: var(--colorPrimario);
+    gap: 20px;
+}
+
+.footer img{
+    width: 32px;
+    height: auto;
+}
+.link {
+    display: inline-block;
+    margin: 0 8px;
+}
+.imagenesFooter{
+    padding: 10px 0px 0px 0px;
+}
+.seccionCopiar{
+    position: absolute;
+    bottom: 20px; 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1174px) {
+    .main {
+        flex-direction: column;
+        align-items: center; 
+    }
+    
+    .rectangulo {
+        position: static; 
+        width: 80%;
+        margin-top: 64px;
+        display: flex;
+        flex-direction: column;
+        min-height: 200px; 
+        padding-bottom: 60px;
+        flex-grow: 1;
+    }
+    .cajaTexto {
+        padding: 40px 0 0 0;
+    }
+
+    .Aviso, .seccionBotones {
+        padding: 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .botonEncriptar, .botonDesencriptar {
+        width: 70%;
+    }
+    .imgRec {
+        display: none;
+    }
+    .textoIngresado {
+        border: none;
+        resize: none;
+        background-color: var(--colorPrimario);
+        font-size: 32px;
+        color: var(--colorSecundario);
+        width: 100%; 
+        max-width: 100%; 
+        height: auto;
+        resize: none;
+        overflow-wrap: break-word;
+        word-break: break-word; 
+        white-space: pre-wrap; 
+    }
+    .seccionCopiar {
+        position: static;
+        margin-top: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+}
+
